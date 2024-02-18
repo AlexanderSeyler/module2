@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexander Seyler</title>
+    <link rel="stylesheet" href="mywebsite.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Alexander Seyler</h1>
+      <div class="tabs">
+        <div class="tab active" onclick="openTab('about')">About Me</div>
+        <div class="tab" onclick="openTab('projects')">My Projects</div>
+        <div class="tab" onclick="openTab('contact')">Contact Me</div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="tab-content active" id="about">
+        <h2>About Me</h2>
+        <p>
+          Hello, I'm Alexander Seyler. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nullam auctor felis in sapien mattis, in hendrerit
+          neque tempor. Phasellus id lacus at ligula convallis mollis.
+        </p>
+      </div>
+      <div class="tab-content" id="projects">
+        <h2>My Projects</h2>
+        <p>Here are some of the projects I've been working on:</p>
+        <ul>
+          <li>Project 1</li>
+          <li>Project 2</li>
+          <li>Project 3</li>
+        </ul>
+      </div>
+      <div class="tab-content" id="contact">
+        <h2>Contact Me</h2>
+        <p>
+          You can reach me via email at
+          <a href="mailto:alexander@example.com">alexander@example.com</a>.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function openTab(tabName) {
+        var i, tabContent, tabLinks;
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = "none";
+        }
+        tabLinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tabLinks.length; i++) {
+          tabLinks[i].classList.remove("active");
+        }
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.classList.add("active");
+      }
+
+      // Open the "About Me" tab by default
+      document.getElementById("about").style.display = "block";
+      document.querySelector(".tab.active").classList.remove("active");
+      document.querySelector(".tab#about").classList.add("active");
+    </script>
+    <footer>
+      <p>&copy; 2024 Alexander Seyler. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

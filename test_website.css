@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.navbar{
+    list-style: none;
+}
+ul{
+    display:block;
+}
+li{
+    display:list-item;
+    text-align: center;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            const name = "alex";
+            var info = "hello";
+            const text = `hello ${name}`;
+            alert(text);
+        </script>
+        <style>
+            main{
+                display:grid;
+                padding:50px;
+                grid-gap: 30px;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(4,1fr);
+            }
+            .box{
+                background-color:rgba(173,216,230,0.5);
+                padding:20px;
+            }
+            .sidebar1{
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .content1{
+                grid-column: 2;
+                grid-row:1;
+            }
+            .ad{
+                grid-column: 1/3;
+                grid-row: 2;
+            }
+            .sidebar2{
+                grid-column: 1;
+                grid-row: 3;
+            }
+            .content2{
+                grid-column: 2;
+                grid-row: 3;
+            }
+            @media screen and (max-width: 600px) {
+                .sidebar1{
+                grid-column: 1/3;
+                grid-row: 1;
+                }
+                .content1{
+                grid-column: 1/3;
+                grid-row:2;
+                }
+                .ad{
+                grid-column: 1;
+                grid-row: 3;
+                }
+                .sidebar2{
+                grid-column: 2;
+                grid-row: 3;
+                }
+                .content2{
+                grid-column: 1/3;
+                grid-row: 4;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="sidebar1 box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis erat ut massa maximus gravida. Vivamus tincidunt euismod mauris vitae fermentum. Nulla sem quam, cursus non quam vitae, volutpat maximus odio. Phasellus imperdiet orci nibh, vitae mollis tortor lobortis vel. Proin at pretium tortor. Sed lacinia arcu ullamcorper arcu tristique facilisis. Ut elementum sit amet lorem nec dapibus. Donec egestas egestas quam, at cursus erat. Nullam feugiat et nibh eget scelerisque. Aliquam erat volutpat. Praesent quis diam id ante pulvinar iaculis. Maecenas nec volutpat tortor, vitae tincidunt elit.</div>
+            <div class="content1 box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis erat ut massa maximus gravida. Vivamus tincidunt euismod mauris vitae fermentum. Nulla sem quam, cursus non quam vitae, volutpat maximus odio. Phasellus imperdiet orci nibh, vitae mollis tortor lobortis vel. Proin at pretium tortor. Sed lacinia arcu ullamcorper arcu tristique facilisis. Ut elementum sit amet lorem nec dapibus. Donec egestas egestas quam, at cursus erat. Nullam feugiat et nibh eget scelerisque. Aliquam erat volutpat. Praesent quis diam id ante pulvinar iaculis. Maecenas nec volutpat tortor, vitae tincidunt elit.</div>
+            <div class="ad box">Lorem ipsum dolor sit amet.</div>
+            <div class="sidebar2 box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed.</div>
+            <div class="content2 box">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis porttitor urna, eget iaculis ante imperdiet a. Quisque euismod, leo sed porttitor feugiat, neque felis posuere nisl, sit amet maximus eros nisi vitae libero. Mauris aliquam, mi id interdum condimentum, risus erat elementum odio, eget ornare diam enim et risus. Pellentesque volutpat molestie diam sit amet dapibus. Praesent pellentesque pulvinar finibus. Phasellus vitae leo placerat, faucibus mi at, feugiat elit. Pellentesque vulputate dignissim consequat. In at ligula eu urna sollicitudin vestibulum. Maecenas volutpat rhoncus sem et porttitor. Vestibulum non magna ac ligula porta varius. Pellentesque ullamcorper commodo egestas. Duis a porta diam.</div>
+        </main>
+    </body>
+</html>
